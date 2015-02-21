@@ -172,8 +172,8 @@ public class PixImage {
 		  for(int x=0; x<width; x++)
 			  for(int y=0; y<height; y++){
 				  previous.setPixel(x, y, rgbs[x][y].getRGB()[0], 
-						  				  rgbs[x][y].getRGB()[1], 
-						  				  rgbs[x][y].getRGB()[2]);
+							rgbs[x][y].getRGB()[1], 
+						  	rgbs[x][y].getRGB()[2]);
 			  }
 
 		  for(int n=0; n<numIterations; n++){
@@ -188,8 +188,8 @@ public class PixImage {
 						  }
 					  init = RGB.divide(init, 9);
 					  result.setPixel(x, y, init.getRGB()[0],
-							  				init.getRGB()[1],
-							  				init.getRGB()[2]);
+							  	init.getRGB()[1],
+							  	init.getRGB()[2]);
 				  }
 			  
 			// Horizontal edges
@@ -203,8 +203,8 @@ public class PixImage {
 					  }
 				  init = RGB.divide(init, 6);
 				  result.setPixel(x, 0, init.getRGB()[0],
-						  				init.getRGB()[1],
-						  				init.getRGB()[2]);
+						  	init.getRGB()[1],
+						  	init.getRGB()[2]);
 				  
 				// South edge
 				  init = new RGB((short)0, (short)0, (short)0);
@@ -214,8 +214,8 @@ public class PixImage {
 					  }
 				  init = RGB.divide(init, 6);
 				  result.setPixel(x, height-1, init.getRGB()[0],
-						  				init.getRGB()[1],
-						  				init.getRGB()[2]);
+						  	       init.getRGB()[1],
+						  	       init.getRGB()[2]);
 			  }
 			  
 			// Vertical edges
@@ -229,8 +229,8 @@ public class PixImage {
 					  }
 				  init = RGB.divide(init, 6);
 				  result.setPixel(0, y, init.getRGB()[0],
-						  				init.getRGB()[1],
-						  				init.getRGB()[2]);
+						  	init.getRGB()[1],
+						  	init.getRGB()[2]);
 				  
 				// East edge
 				  init = new RGB((short)0, (short)0, (short)0);
@@ -240,8 +240,8 @@ public class PixImage {
 					  }
 				  init = RGB.divide(init, 6);
 				  result.setPixel(width-1, y, init.getRGB()[0],
-						  				init.getRGB()[1],
-						  				init.getRGB()[2]);
+						  	      init.getRGB()[1],
+						  	      init.getRGB()[2]);
 			  }
 			  
 			// Corners
@@ -269,8 +269,8 @@ public class PixImage {
 			  for(int x=0; x<width; x++)
 				  for(int y=0; y<height; y++){
 					  previous.setPixel(x, y, result.getRed(x,y), 
-							  				  result.getGreen(x,y),  
-							  				  result.getBlue(x,y));
+							  	  result.getGreen(x,y),  
+							  	  result.getBlue(x,y));
 				  }
 		  } 
 		return result;
@@ -457,8 +457,8 @@ public class PixImage {
 			  
 			  // Calculates the energy at (x,y).
 			  long energy = gxRed*gxRed + gyRed*gyRed + 
-					  		gxGreen*gxGreen + gyGreen*gyGreen + 
-					  		gxBlue*gxBlue + gyBlue*gyBlue;
+					  gxGreen*gxGreen + gyGreen*gyGreen + 
+					    gxBlue*gxBlue + gyBlue*gyBlue;
 
 			  
 			  // Calculates the gray scale of the energy.
