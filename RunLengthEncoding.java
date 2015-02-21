@@ -494,7 +494,8 @@ public class RunLengthEncoding implements Iterable {
     PixImage image4 = array2PixImage(new int[][] { { 0, 3 },
                                                    { 1, 4 },
                                                    { 2, 5 } });   
-    System.out.println("Testing one-parameter RunLengthEncoding constuctor " +                       "on a 3x2 image.  Input image:");
+    System.out.println("Testing one-parameter RunLengthEncoding constuctor " +  
+    			"on a 3x2 image.  Input image:");
     System.out.print(image4);    
     RunLengthEncoding rle4 = new RunLengthEncoding(image4);    
     rle4.check();
