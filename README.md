@@ -1,4 +1,4 @@
-# Java-ImageProcessing
+# Image Processing
 
 This is a course projects of [CS 61B Data Structures](http://www.cs.berkeley.edu/~jrs/61b/) taught by Prof. Jonathan Shewchuk at UC Berkeley. The goals of this project were to:
 
